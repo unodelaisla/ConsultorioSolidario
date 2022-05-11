@@ -24,7 +24,7 @@ namespace ConsultorioSolidario.Models
         public virtual DbSet<ConsultaPrueba> ConsultaPruebas { get; set; } = null!;
         public virtual DbSet<Documento> Documentos { get; set; } = null!;
         public virtual DbSet<Especialista> Especialistas { get; set; } = null!;
-        public virtual DbSet<EstadosConsultum> EstadosConsulta { get; set; } = null!;
+        public virtual DbSet<EstadosConsulta> EstadosConsulta { get; set; } = null!;
         public virtual DbSet<EstadosUsuario> EstadosUsuarios { get; set; } = null!;
         public virtual DbSet<HistorialPaciente> HistorialPacientes { get; set; } = null!;
         public virtual DbSet<Idioma> Idiomas { get; set; } = null!;
@@ -41,7 +41,7 @@ namespace ConsultorioSolidario.Models
         public virtual DbSet<TipoHistorial> TipoHistorials { get; set; } = null!;
         public virtual DbSet<TiposColaborador> TiposColaboradors { get; set; } = null!;
         public virtual DbSet<TiposDocumento> TiposDocumentos { get; set; } = null!;
-        public virtual DbSet<TiposEspecialistum> TiposEspecialista { get; set; } = null!;
+        public virtual DbSet<TiposEspecialista> TiposEspecialista { get; set; } = null!;
         public virtual DbSet<TiposSanitario> TiposSanitarios { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
@@ -353,7 +353,7 @@ namespace ConsultorioSolidario.Models
                     .HasConstraintName("FK_ESPECIALISTAS_USUARIOS");
             });
 
-            modelBuilder.Entity<EstadosConsultum>(entity =>
+            modelBuilder.Entity<EstadosConsulta>(entity =>
             {
                 entity.HasKey(e => e.EcoCod);
 
@@ -699,7 +699,7 @@ namespace ConsultorioSolidario.Models
                     .HasComment("documento acreditacion, politica privacidad, aviso legal...");
             });
 
-            modelBuilder.Entity<TiposEspecialistum>(entity =>
+            modelBuilder.Entity<TiposEspecialista>(entity =>
             {
                 entity.HasKey(e => e.TesCod);
 

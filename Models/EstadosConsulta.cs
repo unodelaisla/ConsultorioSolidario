@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class EstadosConsultum
+    public partial class EstadosConsulta
     {
-        public EstadosConsultum()
+        public EstadosConsulta()
         {
             Consulta = new HashSet<Consulta>();
         }

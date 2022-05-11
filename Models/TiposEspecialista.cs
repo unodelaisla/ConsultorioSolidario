@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class TiposEspecialistum
+    public partial class TiposEspecialista
     {
-        public TiposEspecialistum()
+        public TiposEspecialista()
         {
             Consulta = new HashSet<Consulta>();
             Especialista = new HashSet<Especialista>();

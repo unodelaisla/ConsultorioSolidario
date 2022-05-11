@@ -22,11 +22,11 @@ namespace ConsultorioSolidario.Models
         public string? ConPat { get; set; }
         public string? ConTra { get; set; }
 
-        public virtual EstadosConsultum ConEcoNavigation { get; set; } = null!;
+        public virtual EstadosConsulta ConEcoNavigation { get; set; } = null!;
         public virtual Especialista ConEspNavigation { get; set; } = null!;
         public virtual Paciente ConPacNavigation { get; set; } = null!;
         public virtual Sanitario ConSanNavigation { get; set; } = null!;
-        public virtual TiposEspecialistum ConTesNavigation { get; set; } = null!;
+        public virtual TiposEspecialista ConTesNavigation { get; set; } = null!;
         public virtual ICollection<ConsultaMedicamento> ConsultaMedicamentos { get; set; }
         public virtual ICollection<ConsultaPrueba> ConsultaPruebas { get; set; }
     }

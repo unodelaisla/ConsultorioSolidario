@@ -16,7 +16,7 @@ namespace ConsultorioSolidario.Models
         public int EspTes { get; set; }
         public bool EspTri { get; set; }
 
-        public virtual TiposEspecialistum EspTesNavigation { get; set; } = null!;
+        public virtual TiposEspecialista EspTesNavigation { get; set; } = null!;
         public virtual Usuario EspUsuNavigation { get; set; } = null!;
         public virtual ICollection<Consulta> Consulta { get; set; }
     }
