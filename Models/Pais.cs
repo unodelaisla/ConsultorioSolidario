@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class Paise
+    public partial class Pais
     {
-        public Paise()
+        public Pais()
         {
             Provincia = new HashSet<Provincia>();
             Usuarios = new HashSet<Usuario>();

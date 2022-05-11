@@ -7,12 +7,12 @@ namespace ConsultorioSolidario.Models
     {
         public Pagina()
         {
-            RpaRols = new HashSet<Role>();
+            RpaRols = new HashSet<Rol>();
         }
 
         public int PagCod { get; set; }
         public string PagNom { get; set; } = null!;
 
-        public virtual ICollection<Role> RpaRols { get; set; }
+        public virtual ICollection<Rol> RpaRols { get; set; }
     }
 }

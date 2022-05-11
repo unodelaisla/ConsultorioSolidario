@@ -28,14 +28,14 @@ namespace ConsultorioSolidario.Models
         public int UsuRol { get; set; }
         public int UsuEus { get; set; }
 
-        public virtual Ciudade UsuCiuNavigation { get; set; } = null!;
+        public virtual Ciudad UsuCiuNavigation { get; set; } = null!;
         public virtual EstadosUsuario UsuEusNavigation { get; set; } = null!;
         public virtual Idioma UsuIdiNavigation { get; set; } = null!;
-        public virtual Paise UsuPaiNavigation { get; set; } = null!;
+        public virtual Pais UsuPaiNavigation { get; set; } = null!;
         public virtual Provincia UsuProNavigation { get; set; } = null!;
-        public virtual Role UsuRolNavigation { get; set; } = null!;
+        public virtual Rol UsuRolNavigation { get; set; } = null!;
         public virtual Centro Centro { get; set; } = null!;
-        public virtual Colaboradore Colaboradore { get; set; } = null!;
+        public virtual Colaborador Colaboradore { get; set; } = null!;
         public virtual Especialista Especialista { get; set; } = null!;
         public virtual Mensaje MensajeMenCodNavigation { get; set; } = null!;
         public virtual Paciente Paciente { get; set; } = null!;

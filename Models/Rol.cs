@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class Role
+    public partial class Rol
     {
-        public Role()
+        public Rol()
         {
             Usuarios = new HashSet<Usuario>();
             RpaPags = new HashSet<Pagina>();

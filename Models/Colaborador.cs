@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class Colaboradore
+    public partial class Colaborador
     {
         public int ColUsu { get; set; }
         public int ColTco { get; set; }

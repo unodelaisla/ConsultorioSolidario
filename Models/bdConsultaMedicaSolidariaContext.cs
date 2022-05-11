@@ -17,8 +17,8 @@ namespace ConsultorioSolidario.Models
         }
 
         public virtual DbSet<Centro> Centros { get; set; } = null!;
-        public virtual DbSet<Ciudade> Ciudades { get; set; } = null!;
-        public virtual DbSet<Colaboradore> Colaboradores { get; set; } = null!;
+        public virtual DbSet<Ciudad> Ciudades { get; set; } = null!;
+        public virtual DbSet<Colaborador> Colaboradores { get; set; } = null!;
         public virtual DbSet<Consulta> Consultas { get; set; } = null!;
         public virtual DbSet<ConsultaMedicamento> ConsultaMedicamentos { get; set; } = null!;
         public virtual DbSet<ConsultaPrueba> ConsultaPruebas { get; set; } = null!;
@@ -32,10 +32,10 @@ namespace ConsultorioSolidario.Models
         public virtual DbSet<Mensaje> Mensajes { get; set; } = null!;
         public virtual DbSet<Paciente> Pacientes { get; set; } = null!;
         public virtual DbSet<Pagina> Paginas { get; set; } = null!;
-        public virtual DbSet<Paise> Paises { get; set; } = null!;
+        public virtual DbSet<Pais> Paises { get; set; } = null!;
         public virtual DbSet<Provincia> Provincias { get; set; } = null!;
         public virtual DbSet<Prueba> Pruebas { get; set; } = null!;
-        public virtual DbSet<Role> Roles { get; set; } = null!;
+        public virtual DbSet<Rol> Roles { get; set; } = null!;
         public virtual DbSet<Sanitario> Sanitarios { get; set; } = null!;
         public virtual DbSet<Servicio> Servicios { get; set; } = null!;
         public virtual DbSet<TipoHistorial> TipoHistorials { get; set; } = null!;
@@ -100,7 +100,7 @@ namespace ConsultorioSolidario.Models
                         });
             });
 
-            modelBuilder.Entity<Ciudade>(entity =>
+            modelBuilder.Entity<Ciudad>(entity =>
             {
                 entity.HasKey(e => e.CiuCod);
 
@@ -121,7 +121,7 @@ namespace ConsultorioSolidario.Models
                     .HasConstraintName("FK_CIUDADES_PROVINCIAS");
             });
 
-            modelBuilder.Entity<Colaboradore>(entity =>
+            modelBuilder.Entity<Colaborador>(entity =>
             {
                 entity.HasKey(e => e.ColUsu);
 
@@ -149,7 +149,7 @@ namespace ConsultorioSolidario.Models
 
                 entity.HasOne(d => d.ColUsuNavigation)
                     .WithOne(p => p.Colaboradore)
-                    .HasForeignKey<Colaboradore>(d => d.ColUsu)
+                    .HasForeignKey<Colaborador>(d => d.ColUsu)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_COLABORADORES_USUARIOS");
             });
@@ -535,7 +535,7 @@ namespace ConsultorioSolidario.Models
                     .HasColumnName("pag_nom");
             });
 
-            modelBuilder.Entity<Paise>(entity =>
+            modelBuilder.Entity<Pais>(entity =>
             {
                 entity.HasKey(e => e.PaiCod);
 
@@ -588,7 +588,7 @@ namespace ConsultorioSolidario.Models
                     .HasColumnName("pru_nom");
             });
 
-            modelBuilder.Entity<Role>(entity =>
+            modelBuilder.Entity<Rol>(entity =>
             {
                 entity.HasKey(e => e.RolCod);
 
@@ -605,7 +605,7 @@ namespace ConsultorioSolidario.Models
                     .UsingEntity<Dictionary<string, object>>(
                         "RolPagina",
                         l => l.HasOne<Pagina>().WithMany().HasForeignKey("RpaPag").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ROL_PAGINAS_PAGINAS"),
-                        r => r.HasOne<Role>().WithMany().HasForeignKey("RpaRol").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ROL_PAGINAS_ROLES"),
+                        r => r.HasOne<Rol>().WithMany().HasForeignKey("RpaRol").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_ROL_PAGINAS_ROLES"),
                         j =>
                         {
                             j.HasKey("RpaRol", "RpaPag");

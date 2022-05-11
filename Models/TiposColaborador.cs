@@ -7,12 +7,12 @@ namespace ConsultorioSolidario.Models
     {
         public TiposColaborador()
         {
-            Colaboradores = new HashSet<Colaboradore>();
+            Colaboradores = new HashSet<Colaborador>();
         }
 
         public int TcoCod { get; set; }
         public string TcoDes { get; set; } = null!;
 
-        public virtual ICollection<Colaboradore> Colaboradores { get; set; }
+        public virtual ICollection<Colaborador> Colaboradores { get; set; }
     }
 }

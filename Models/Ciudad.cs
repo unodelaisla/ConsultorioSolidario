@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsultorioSolidario.Models
 {
-    public partial class Ciudade
+    public partial class Ciudad
     {
-        public Ciudade()
+        public Ciudad()
         {
             Usuarios = new HashSet<Usuario>();
         }
